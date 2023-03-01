@@ -1,0 +1,524 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.main{
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.main_title{
+    margin-top: 25px;
+    margin-left: 60px;
+}
+
+.sidebar{
+    width: 400px;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.priceList{
+    width: 100%;
+    height: 100%;
+
+    
+}
+
+.price_catname{
+    margin-left: 30px;
+}
+
+.button_scroll{
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+    background-color: #ff773c;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border:1px solid #2d303a;
+    cursor: pointer;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    color:white;
+    background-color: #2d303a;
+    font-size: 20px;
+}
+
+
+.logo{
+    cursor:pointer;
+}
+
+.logo_name{
+    text-decoration: none;
+    color: white;
+}
+
+.logotype{
+    width: 330px;
+    height: 100px;
+}
+
+.links{
+    display: flex;
+}
+
+.links a:after {
+  content: "";
+  border-bottom: 3px solid red;
+  display: block;
+  width: 0px;
+ 
+}
+
+.links a:hover:after {
+  width: 100%;
+  height: 3px;
+  left: 0;
+  transition: all .5s linear;
+}
+
+.links a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.name_sidebar{
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.sidebar_links{
+    margin-top: 37px;
+}
+
+.sidebar_links button{
+    display: block;
+    padding: 6px;
+    width: 98%;
+    border: none;
+    border-radius:6px;
+    cursor:pointer;
+    margin-left: 3px;
+    margin-bottom: 7px;
+    text-decoration: none;
+    color:black;
+    font-size: 14px;
+}
+
+.sidebar_links button:hover{
+    background-color: darkgray;
+}
+
+.sidebar_links button:focus{
+    background-color: darkgray;
+}
+
+.none_text{
+    width: 100%;
+    height: 100%;
+}
+
+.none_text p{
+    text-align: center;    
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.table tr{
+    border-bottom: #2d303a 2px solid;
+}
+
+.table th{
+ padding-left: 90px;
+}
+
+.table tbody td{
+    width: 30px;
+    height: 20px;
+    background-color: transparent;
+    text-align: center;
+}
+
+.container_img{
+    text-align:center;
+    width: 100px;
+}
+
+.price_img:hover{
+   box-shadow: 0 0 0 1px rgba(63, 62, 62, 0.77);
+}
+
+.show_div {
+    display: flex;
+    justify-content: center;
+}
+
+.show_btn {
+    min-width: 12ch;
+    outline: 1px solid;
+    border: none;
+    border-radius: 0.2em;
+    background-color: transparent;
+    color: black;
+    padding: 0 1em;
+    font: inherit;
+    font-size: 0.875rem;
+    line-height: 2.25em;
+    cursor: pointer;
+}
+
+.show_btn:hover {
+    box-shadow: black 4px 4px 10px;;
+}
+
+.in_basket{
+    width: 85%;
+    height: 30px;
+    font-size: 13px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    border:none;
+    border-radius: 6px;
+    background-color: #2d303a;
+    color:white;
+}
+
+.titles{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:5px;
+}
+
+.order_button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: -50px;
+    padding: 0 7px;
+}
+
+.order_button button{
+    height: 27px;
+    width: 170px;
+    background-color: #ff773c;
+    color:#fff;
+    font-weight:bold;
+    border:none;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.end_count{
+    float: right;
+    margin-right: 20px;
+}
+
+
+.order{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.order_titles{
+    margin-bottom: 20px;
+}
+
+.order input{
+    margin-bottom: 8px;
+    padding: 15px;
+    border-radius: 6px;
+    border:none;
+    background-color: #f0f0f0;
+}
+
+.order button{
+    margin-top: 10px;
+    width: 30%;
+    height: 32px;
+    border: none;
+    background-color: #2d303a;
+    color: white;
+    font-size: 14px;
+    align-self: flex-end;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.order button:hover{
+    border:2px solid black;
+    background-color: white;
+    color:black;
+}
+
+.button_count{
+    width: 30px;
+    height: 30px;
+    margin-left: 7px;
+    margin-right: 7px;
+    font-size: 18px;
+    border-radius:6px;
+    border:none;
+    cursor:pointer;
+}
+
+.input_count{
+    width: 57px;
+    font-size: 17px;
+}
+
+.tr_element{
+    text-align: center;
+}
+
+.add_something{
+    margin: 300px auto;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.contact{
+    text-align: center;
+    font-family: monospace;
+    margin-top: 250px;
+}
+
+.contact h1{
+    font-size: 26px;
+
+}
+
+.contact_inf{
+
+    font-size:16px;
+}
+
+
+/* RRC */
+
+
+/* Table Styles */
+
+.rrc_title{
+    margin-left: 70px;
+}
+
+.table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 9px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+/* Preloader */
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 55px;
+
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #000 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.color_shem{
+    width: 700px;
+    height: 500px;
+    margin: 40px 10px;
+    cursor: pointer;
+}
+
+.foto_fish{
+    display: flex;
+    margin: 0 auto;
+    width: 1400px;
+    justify-content: center;
+}
+
+@media (max-width: 1200px){
+    .foto_fish{
+        display:block;
+        width: 1000px;
+    }
+    .color_shem{
+        display: block;
+        margin: 0 auto;
+
+    }
+}
+
+.title{
+    text-align: center;
+}
