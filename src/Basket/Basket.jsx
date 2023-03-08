@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import axios from "axios";
 import {toast} from "react-toastify";
 
-export const Basket = ({countBasket, setCountBasket, basket, setBasket, setLoopBasket, setCatName}) => {
+export const Basket = ({countBasket, setCountBasket, basket, setBasket, setLoopBasket}) => {
     const [price, setPrice] = useState([])
     const [localBasket, setLocalBasket] = useState([])
     const [products, setProducts] = useState([])
@@ -21,19 +21,19 @@ export const Basket = ({countBasket, setCountBasket, basket, setBasket, setLoopB
             setProducts(response.data.products)
         })
         document.title = 'Корзина'
-        setCatName('')
     }, [])
 
     const notify = (name) => toast.error(name + " удален с корзины!");
 
     useEffect(() => {
         let basket = localStorage.getItem('basket')
+        let shopBasket
         let newArr = []
         let sum = 0
         if (basket) {
-            basket = JSON.parse(basket)
+            let shopBasket = JSON.parse(basket)
             products.map(item => {
-                for (const [key, value] of Object.entries(basket)) {
+                for (const [key, value] of Object.entries(shopBasket)) {
                     if (key.split('_id')[1] == item.id) {
                         newArr.push(item)
                         sum += item.price * value
@@ -42,7 +42,7 @@ export const Basket = ({countBasket, setCountBasket, basket, setBasket, setLoopB
             })
             setPrice(sum)
             setBasket(newArr)
-            setCountBasket(Object.entries(basket))
+            setCountBasket(Object.entries(shopBasket))
         }
     }, [products, localBasket])
 
@@ -96,11 +96,10 @@ export const Basket = ({countBasket, setCountBasket, basket, setBasket, setLoopB
                     <th>Артикул</th>
                     <th>Длина</th>
                     <th>Вес</th>
-                    <th>Цвет</th>
                     <th>Цена</th>
                     <th>Количество</th>
                     <th>Стоимость</th>
-                    <th></th>
+                    <th>Кнопки</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -119,7 +118,6 @@ export const Basket = ({countBasket, setCountBasket, basket, setBasket, setLoopB
                             <td>{item.articul}</td>
                             <td><p>{item.length}мм</p></td>
                             <td><p>{item.weight}г</p></td>
-                            <td><p>{item.color}</p></td>
                             <td><p>{item.price}</p></td>
                             {countBasket && countBasket.map(count => {
                                 if (count[0].split('_id')[1] == item.id) {
