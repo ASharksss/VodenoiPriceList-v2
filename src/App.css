@@ -10,7 +10,6 @@ body{
 }
 
 .container{
-    width: 1440px;
     margin: 0 auto;
 }
 
@@ -28,7 +27,7 @@ body{
 .sidebar{
     width: 400px;
     height: 100%;
-    margin-right: 10px;
+    margin-right: 40px;
 }
 
 .priceList{
@@ -60,7 +59,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width:100%;
     color:white;
     background-color: #2d303a;
     font-size: 20px;
@@ -160,11 +158,10 @@ header{
 }
 
 .table th{
- padding-left: 55px;
+    text-align: center;
 }
 
 .table tbody td{
-    width: 30px;
     height: 20px;
     background-color: transparent;
     text-align: center;
@@ -172,7 +169,7 @@ header{
 
 .container_img{
     text-align:center;
-    width: 100px;
+    width: 50px;
 }
 
 .price_img:hover{
@@ -522,3 +519,69 @@ header{
 .title{
     text-align: center;
 }
+
+.auth_container{
+    text-align: center;
+    margin-top: 170px;
+}
+
+.auth_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth_form input{
+    margin: 10px 2px;
+    padding: 5px;
+    height: 30px;
+}
+
+.input_username{
+    width: 350px;
+}
+
+.input_pass{
+    width: 315px;
+}
+
+.show_password_btn{
+    height: 35px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.login_btn{
+    width: 360px;
+    height: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.registration{
+    text-align: center;
+}
+
+.registration_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration_form input{
+    width: 350px;
+    height: 30px;
+    margin: 2px;
+}
+
+.reg_btn{
+    width: 360px;
+    height: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
