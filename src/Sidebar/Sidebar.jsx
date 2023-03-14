@@ -37,7 +37,7 @@ export const Sidebar = ({fish, setFish, setCount, setShow, setCId, setMessage, s
         </div>
         <div className="sidebar_links">
           <div className="summer">
-            <h2>Лето</h2>
+            <h2 className='season_title'>Лето</h2>
             {
               fish.map((item) => {
                   if (item.season == "Лето") {
@@ -54,7 +54,7 @@ export const Sidebar = ({fish, setFish, setCount, setShow, setCId, setMessage, s
             }
           </div>
           <div className="winter">
-            <h2>Зима</h2>
+            <h2 className='season_title'>Зима/Лето</h2>
             {
               fish.map((item) => {
                   if (item.season == "Зима") {
