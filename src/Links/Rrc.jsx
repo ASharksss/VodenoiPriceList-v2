@@ -19,6 +19,14 @@ export const Rrc = ({setCatName}) => {
           </thead>
           <tbody>
           <tr>
+            <td>MOON раттлин-116 мм 48гр</td>
+            <td>900</td>
+          </tr>
+          <tr>
+            <td>MOON раттлин-88 мм 33гр</td>
+            <td>550</td>
+          </tr>
+          <tr>
             <td>АЙМА раттлин-60 мм 12гр (AYMA)</td>
             <td>430</td>
           </tr>
