@@ -46,9 +46,7 @@ export const Sidebar = ({fish, setFish, setCount, setShow, setCId, setMessage, s
                         handleGetProducts(item.id, item.name)
                       }}> {item.name} </button>
                     )
-
                   }
-
                 }
               )
             }
