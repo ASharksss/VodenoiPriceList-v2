@@ -36,6 +36,23 @@ export const Sidebar = ({fish, setFish, setCount, setShow, setCId, setMessage, s
           <h2>Виды приманок</h2>
         </div>
         <div className="sidebar_links">
+          <div className="hy">
+            <h2 className='season_title'>Голография</h2>
+            {
+              fish.map((item) => {
+                  if (item.season == "Голография") {
+                    return (
+                      <button disabled={dis} key={item.id} onClick={() => {
+                        handleGetProducts(item.id, item.name)
+                      }}> {item.name} </button>
+                    )
+
+                  }
+
+                }
+              )
+            }
+          </div>
           <div className="summer">
             <h2 className='season_title'>Лето</h2>
             {
