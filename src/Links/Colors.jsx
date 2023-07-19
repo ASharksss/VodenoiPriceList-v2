@@ -5,6 +5,7 @@ import two from '../img/2.jpg'
 import three from '../img/mandula.jpg'
 import four from '../img/perch1.jpg'
 import five from '../img/perch2.jpg'
+import hy from '../img/hy.jpg'
 
 export const Colors = ({setCatName}) => {
   useEffect(() => {
@@ -41,6 +42,14 @@ export const Colors = ({setCatName}) => {
         </div>
       </div>
 
+      <div className="foto_block">
+        <h1 className='title'>Голография</h1>
+        <div className="foto_fish">
+          <Fancybox>
+            <img className='color_shem' src={hy} data-fancybox="gallery"/>
+          </Fancybox>
+        </div>
+      </div>
 
     </div>
   )
