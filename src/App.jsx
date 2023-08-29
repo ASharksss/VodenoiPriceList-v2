@@ -15,6 +15,7 @@ import {Colors} from "./Links/Colors";
 import {Login} from "./User/Login";
 import {UserList} from "./User/UserList";
 import {NewUser} from "./User/NewUser";
+import Profile from "./Profile/Profile";
 
 function App() {
     const navigate = useNavigate()
@@ -142,6 +143,7 @@ function App() {
                     <Route path='/rrc' element={<Rrc setCatName={setCatName}/>}/>
                     <Route path='/user/list' element={<UserList/>}/>
                     <Route path='/create' element={<NewUser/>}/>
+                    <Route path='/profile' element={<Profile/>}/>
                 </Routes>
                 <ToastContainer
                     position="bottom-right"
