@@ -5,7 +5,7 @@ import HistoryOrder from "./HistoryOrder";
 
 const Profile = () => {
   return (
-    <div>
+    <div className='profile_wrapper'>
       <ProfileCard/>
       <HistoryOrder/>
     </div>

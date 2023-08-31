@@ -1,3 +1,12 @@
+.detail_order {
+
+}
+
+.detail_order-sum {
+    font-size: 18px;
+    margin-left: 40px;
+}
+
 .profile_card {
     width: 900px;
     padding: 60px;
@@ -22,7 +31,7 @@
 
 }
 
-.input-row + .input-row{
+.input-row + .input-row {
     margin-left: 10px;
 }
 
@@ -56,7 +65,7 @@
 .history_order-item {
     justify-content: space-between;
     background-color: rgba(236, 236, 236, 1);
-    padding: 12px 20px 12px 20px ;
+    padding: 12px 20px 12px 20px;
     border-radius: 10px;
     margin-bottom: 10px;
     font-size: 14px;
@@ -70,4 +79,31 @@
 .history_order-title {
     font-size: 32px;
     margin-bottom: 30px;
+}
+
+.detail_order-info {
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 30px 10px 10px 23px;
+}
+
+.detail_order-status {
+    color: #de5e24;
+    font-weight: bold;
+}
+
+.backBtn {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    margin: 30px 10px 10px 23px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: .25s    ;
+}
+
+.backBtn:hover {
+    background-color: rgba(169, 169, 169, 0.87);
 }

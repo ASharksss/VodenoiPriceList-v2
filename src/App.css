@@ -1,19 +1,27 @@
-html{
+html {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: monospace;
     padding: 0;
     margin: 0;
 }
 
-.container{
+.noBtn {
+    border: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.container {
     margin: 0 auto;
 }
 
-.main{
+.main {
     display: flex;
     padding-left: 30px;
     padding-right: 30px;
@@ -27,129 +35,133 @@ body{
     display: flex;
 }
 
-.main_title{
+.space-between {
+    justify-content: space-between;
+}
+
+.main_title {
     margin-top: 25px;
     margin-left: 60px;
 }
 
-.sidebar{
+.sidebar {
     width: 400px;
     height: 100%;
     margin-right: 40px;
 }
 
-.priceList{
+.priceList {
     width: 100%;
     height: 100%;
 
-    
+
 }
 
-.price_catname{
+.price_catname {
     margin-left: 30px;
 }
 
-.button_scroll{
+.button_scroll {
     position: fixed;
-    bottom:20px;
+    bottom: 20px;
     right: 20px;
     background-color: #ff773c;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: transparent;
-    border:1px solid #2d303a;
+    border: 1px solid #2d303a;
     cursor: pointer;
 }
 
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color:white;
+    color: white;
     background-color: #2d303a;
     font-size: 20px;
 }
 
 
-.logo{
-    cursor:pointer;
+.logo {
+    cursor: pointer;
 }
 
-.logo_name{
+.logo_name {
     text-decoration: none;
     color: white;
 }
 
-.logotype{
+.logotype {
     width: 330px;
     height: 100px;
 }
 
-.links{
+.links {
     display: flex;
 }
 
 .links a:after {
-  content: "";
-  border-bottom: 3px solid red;
-  display: block;
-  width: 0px;
- 
+    content: "";
+    border-bottom: 3px solid red;
+    display: block;
+    width: 0px;
+
 }
 
 .links a:hover:after {
-  width: 100%;
-  height: 3px;
-  left: 0;
-  transition: all .5s linear;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    transition: all .5s linear;
 }
 
-.links a{
+.links a {
     padding: 10px;
     text-decoration: none;
     color: white;
 }
 
-.name_sidebar{
+.name_sidebar {
     margin-left: 10px;
     margin-top: 30px;
 }
 
-.sidebar_links{
+.sidebar_links {
     margin-top: 37px;
 }
 
-.sidebar_links button{
+.sidebar_links button {
     display: block;
     padding: 6px;
     width: 98%;
     border: none;
-    border-radius:6px;
-    cursor:pointer;
+    border-radius: 6px;
+    cursor: pointer;
     margin-left: 3px;
     margin-bottom: 7px;
     text-decoration: none;
-    color:black;
+    color: black;
     font-size: 14px;
 }
 
-.sidebar_links button:hover{
+.sidebar_links button:hover {
     background-color: darkgray;
 }
 
-.sidebar_links button:focus{
+.sidebar_links button:focus {
     background-color: darkgray;
 }
 
-.none_text{
+.none_text {
     width: 100%;
     height: 100%;
 }
 
-.none_text p{
-    text-align: center;    
+.none_text p {
+    text-align: center;
 }
 
 .table {
@@ -161,27 +173,32 @@ header{
     margin-top: 50px;
 }
 
-.table tr{
+.table tr {
     border-bottom: #2d303a 2px solid;
 }
 
-.table th{
+.table th {
     text-align: center;
 }
 
-.table tbody td{
+.table tbody td {
     height: 20px;
     background-color: transparent;
     text-align: center;
 }
 
-.container_img{
-    text-align:center;
+.container_img {
+    text-align: center;
     width: 50px;
 }
 
-.price_img:hover{
-   box-shadow: 0 0 0 1px rgba(63, 62, 62, 0.77);
+.price_img {
+    width: 173px;
+    height: 117px;
+}
+
+.price_img:hover {
+    box-shadow: 0 0 0 1px rgba(63, 62, 62, 0.77);
 }
 
 .show_div {
@@ -207,27 +224,27 @@ header{
     box-shadow: black 4px 4px 10px;;
 }
 
-.in_basket{
+.in_basket {
     width: 85%;
     height: 30px;
     font-size: 13px;
     display: block;
     margin: 0 auto;
     cursor: pointer;
-    border:none;
+    border: none;
     border-radius: 6px;
     background-color: #2d303a;
-    color:white;
+    color: white;
 }
 
-.titles{
+.titles {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:5px;
+    padding: 5px;
 }
 
-.order_button{
+.order_button {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -236,25 +253,25 @@ header{
     padding: 0 7px;
 }
 
-.order_button button{
+.order_button button {
     height: 27px;
     width: 170px;
     background-color: #ff773c;
-    color:#fff;
-    font-weight:bold;
-    border:none;
-    border-top-left-radius: 10px ;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     cursor: pointer;
 }
 
-.end_count{
+.end_count {
     float: right;
     margin-right: 20px;
 }
 
 
-.order{
+.order {
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -263,19 +280,19 @@ header{
     padding: 50px;
 }
 
-.order_titles{
+.order_titles {
     margin-bottom: 20px;
 }
 
-.order input{
+.order input {
     margin-bottom: 8px;
     padding: 15px;
     border-radius: 6px;
-    border:none;
+    border: none;
     background-color: #f0f0f0;
 }
 
-.order button{
+.order button {
     margin-top: 10px;
     width: 30%;
     height: 32px;
@@ -288,54 +305,53 @@ header{
     border-radius: 10px;
 }
 
-.order button:hover{
-    border:2px solid black;
+.order button:hover {
+    border: 2px solid black;
     background-color: white;
-    color:black;
+    color: black;
 }
 
-.button_count{
+.button_count {
     width: 30px;
     height: 30px;
     margin-left: 7px;
     margin-right: 7px;
     font-size: 18px;
-    border-radius:6px;
-    border:none;
-    cursor:pointer;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
 }
 
-.input_count{
+.input_count {
     width: 57px;
     font-size: 17px;
 }
 
-.tr_element{
+.tr_element {
     text-align: center;
 }
 
-.add_something{
+.add_something {
     margin: 300px auto;
     font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
-
-.contact{
+.contact {
     text-align: center;
     font-family: monospace;
     margin-top: 250px;
 }
 
-.contact h1{
+.contact h1 {
     font-size: 26px;
 
 }
 
-.contact_inf{
+.contact_inf {
 
-    font-size:16px;
+    font-size: 16px;
 }
 
 
@@ -344,13 +360,13 @@ header{
 
 /* Table Styles */
 
-.rrc_title{
+.rrc_title {
     margin-left: 70px;
 }
 
-.table-wrapper{
+.table-wrapper {
     margin: 10px 70px 70px;
-    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
 }
 
 .fl-table {
@@ -391,7 +407,6 @@ header{
 }
 
 
-
 /* Responsive */
 
 @media (max-width: 767px) {
@@ -399,7 +414,8 @@ header{
         display: block;
         width: 100%;
     }
-    .table-wrapper:before{
+
+    .table-wrapper:before {
         content: "Scroll horizontally >";
         display: block;
         text-align: right;
@@ -407,20 +423,25 @@ header{
         color: white;
         padding: 0 0 10px;
     }
+
     .fl-table thead, .fl-table tbody, .fl-table thead th {
         display: block;
     }
-    .fl-table thead th:last-child{
+
+    .fl-table thead th:last-child {
         border-bottom: none;
     }
+
     .fl-table thead {
         float: left;
     }
+
     .fl-table tbody {
         width: auto;
         position: relative;
         overflow-x: auto;
     }
+
     .fl-table td, .fl-table th {
         padding: 20px .625em .625em .625em;
         height: 60px;
@@ -432,26 +453,33 @@ header{
         font-size: 13px;
         text-overflow: ellipsis;
     }
+
     .fl-table thead th {
         text-align: left;
         border-bottom: 1px solid #f7f7f9;
     }
+
     .fl-table tbody tr {
         display: table-cell;
     }
+
     .fl-table tbody tr:nth-child(odd) {
         background: none;
     }
+
     .fl-table tr:nth-child(even) {
         background: transparent;
     }
+
     .fl-table tr td:nth-child(odd) {
         background: #F8F8F8;
         border-right: 1px solid #E6E4E4;
     }
+
     .fl-table tr td:nth-child(even) {
         border-right: 1px solid #E6E4E4;
     }
+
     .fl-table tbody td {
         display: block;
         text-align: center;
@@ -468,6 +496,7 @@ header{
     height: 55px;
 
 }
+
 .lds-ring div {
     box-sizing: border-box;
     display: block;
@@ -480,15 +509,19 @@ header{
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: #000 transparent transparent transparent;
 }
+
 .lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
 }
+
 .lds-ring div:nth-child(2) {
     animation-delay: -0.3s;
 }
+
 .lds-ring div:nth-child(3) {
     animation-delay: -0.15s;
 }
+
 @keyframes lds-ring {
     0% {
         transform: rotate(0deg);
@@ -498,69 +531,70 @@ header{
     }
 }
 
-.color_shem{
+.color_shem {
     width: 700px;
     height: 500px;
     margin: 40px 10px;
     cursor: pointer;
 }
 
-.foto_fish{
+.foto_fish {
     display: flex;
     margin: 0 auto;
     width: 1400px;
     justify-content: center;
 }
 
-@media (max-width: 1200px){
-    .foto_fish{
-        display:block;
+@media (max-width: 1200px) {
+    .foto_fish {
+        display: block;
         width: 1000px;
     }
-    .color_shem{
+
+    .color_shem {
         display: block;
         margin: 0 auto;
 
     }
 }
 
-.title{
+.title {
     text-align: center;
 }
 
-.auth_container{
+.auth_container {
     text-align: center;
     margin-top: 170px;
 }
 
-.auth_form{
+.auth_form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.auth_form input{
+.auth_form input {
     margin: 10px 2px;
     padding: 5px;
     height: 30px;
 }
 
-.input_username{
+.input_username {
     width: 350px;
 }
 
-.input_pass{
+.input_pass {
     width: 315px;
 }
 
-.show_password_btn{
+.show_password_btn {
     height: 35px;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.login_btn{
+.login_btn {
     width: 360px;
     height: 40px;
     margin-top: 20px;
@@ -568,31 +602,31 @@ header{
     font-size: 15px;
 }
 
-.registration{
+.registration {
     text-align: center;
 }
 
-.registration_form{
+.registration_form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.registration_form input{
+.registration_form input {
     width: 350px;
     height: 30px;
     margin: 2px;
 }
 
-.reg_btn{
+.reg_btn {
     width: 360px;
     height: 30px;
     margin-top: 20px;
     cursor: pointer;
 }
 
-.season_title{
+.season_title {
     margin-top: 20px;
     text-align: left;
 }
