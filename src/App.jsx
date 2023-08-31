@@ -17,6 +17,7 @@ import {UserList} from "./User/UserList";
 import {NewUser} from "./User/NewUser";
 import Profile from "./Profile/Profile";
 import DetailOrder from "./Profile/DetailOrder";
+import Orders from "./Orders/Orders";
 
 function App() {
   const navigate = useNavigate()
@@ -146,6 +147,7 @@ function App() {
           <Route path='/create' element={<NewUser/>}/>
           <Route path='/profile' element={<Profile/>}/>
           <Route path='/detailOrder' element={<DetailOrder/>}/>
+          <Route path='/orders' element={<Orders/>}/>
         </Routes>
         <ToastContainer
           position="bottom-right"

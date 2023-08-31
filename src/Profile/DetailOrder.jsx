@@ -7,6 +7,7 @@ const DetailOrder = () => {
     <div className='detail_order'>
       <button className='noBtn backBtn' onClick={() => window.history.back()}>Назад</button>
       <div className="shadow space-between detail_order-info">
+          <p className='detail_order-sum'>Заказчик: <span className='bold'>Название</span></p>
           <p className='detail_order-sum'>Дата формирования: <span className='bold'>28.08.23</span></p>
           <p className='detail_order-sum'>Общая стоимость заказа: <span className='bold'>580р</span></p>
           <p className='detail_order-sum'>Статус: <span className='detail_order-status'>Отправлен</span></p>

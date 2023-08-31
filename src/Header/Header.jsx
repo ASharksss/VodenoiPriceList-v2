@@ -23,7 +23,7 @@ export const Header = ({countBasket, isAuth, role}) => {
                     {role == 'admin' &&
                       <>
                         <Link to='/user/list'>Пользователи</Link>
-                        <Link to='/profile'>Заказы</Link> </> }
+                        <Link to='/orders'>Заказы</Link> </> }
 
                        </>:
                     <Link to='/login'>Войти</Link>
