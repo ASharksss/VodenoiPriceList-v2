@@ -11,9 +11,9 @@ const Orders = () => {
             <option>В работе</option>
             <option>Завершен</option>
         </select>
-        <div className="orders">
-            <NavLink className='history_order-wrapper'>
-                <div className='history_order-item row'>
+        <div className="orders row">
+            <NavLink to='/detailOrder' className='history_order-wrapper'>
+                <div className='order-item row'>
                     <p>Заказчик</p>
                     <p>29.08.23</p>
                     <p>38 товаров</p>
@@ -21,6 +21,7 @@ const Orders = () => {
                     <p>Отправлен</p>
                 </div>
             </NavLink>
+            <button className='order_btn'>Принять</button>
         </div>
 
     </div>

@@ -1,4 +1,18 @@
 
+.orders {
+    width: 1700px;
+}
+
+.order-item {
+    width: 1440px;
+    justify-content: space-between;
+    background-color: rgba(236, 236, 236, 1);
+    padding: 12px 20px 12px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: .25s;
+}
 
 .orders_wrapper {
     width: 1700px;
@@ -13,4 +27,21 @@
     cursor: pointer;
     margin-bottom: 20px;
     padding: 5px;
+}
+
+.order_btn {
+    width: 150px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: .25s;
+    border: none;
+    margin-left: 20px;
+}
+
+
+
+.order_btn:hover {
+    background-color: rgba(169, 169, 169, 0.87);
 }
