@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+.w-100 {
+    width: 100%;
+}
+
 .noBtn {
     border: none;
 }
@@ -37,6 +41,10 @@ body {
 
 .space-between {
     justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
 }
 
 .main_title {

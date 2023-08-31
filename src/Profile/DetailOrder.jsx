@@ -5,7 +5,7 @@ import img from '../../src/asserts/shop.jpg'
 const DetailOrder = () => {
   return (
     <div className='detail_order'>
-      <button className='noBtn backBtn'>Назад</button>
+      <button className='noBtn backBtn' onClick={() => window.history.back()}>Назад</button>
       <div className="shadow space-between detail_order-info">
           <p className='detail_order-sum'>Дата формирования: <span className='bold'>28.08.23</span></p>
           <p className='detail_order-sum'>Общая стоимость заказа: <span className='bold'>580р</span></p>
