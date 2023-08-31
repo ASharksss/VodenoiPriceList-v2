@@ -1,4 +1,16 @@
-.orders {
+
+
+.orders_wrapper {
     width: 1700px;
     margin: 0 auto;
+}
+
+.orders_select {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #929292;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 5px;
 }
