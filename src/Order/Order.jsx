@@ -22,7 +22,8 @@ export const Order = ({countBasket, basket, setLoopBasket}) => {
                 method: "post",
                 url: "/order",
                 data: formData,
-                headers: { "Content-Type": "multipart/form-data" },
+                headers: { "Content-Type": "multipart/form-data",
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')},
             }).then(res => {
                 if (res.data.serverStatus == 1) {
                     localStorage.removeItem('basket')

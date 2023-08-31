@@ -7,6 +7,9 @@ export const NewUser = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [fio, setFIO] = useState('')
+  const [inn, setINN] = useState('')
+  const [ogrn, setOGRN] = useState('')
+  const [address, setAddress] = useState('')
   const [email, setEmail] = useState('')
   const [number, setNumber] = useState('')
   const [organization, setOrganization] = useState('')
@@ -18,7 +21,10 @@ export const NewUser = () => {
       email: email,
       fio: fio,
       number: number,
-      organization: organization
+      organization: organization,
+      ogrn: ogrn,
+      inn: inn,
+      address: address
     }
     axios.post('/auth/registration', data)
       .then(res => {
@@ -47,6 +53,9 @@ export const NewUser = () => {
           <input type="text" onChange={e => setNumber(e.target.value)} placeholder="Номер"/>
           <input type="text" onChange={e => setFIO(e.target.value)} placeholder="ФИО"/>
           <input type="text" onChange={e => setOrganization(e.target.value)} placeholder="Организация"/>
+          <input type="text" onChange={e => setAddress(e.target.value)} placeholder="Адрес"/>
+          <input type="text" onChange={e => setINN(e.target.value)} placeholder="ИНН"/>
+          <input type="text" onChange={e => setOGRN(e.target.value)} placeholder="ОГРН"/>
           <button type="submit" className='reg_btn'>Создать</button>
         </form>
       </div>

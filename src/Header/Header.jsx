@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../img/vodenoi-white-logo.png'
 
-export const Header = ({countBasket, isAuth, role}) => {
+export const Header = ({countBasket, isAuth, role, status}) => {
     return (
         <header>
 
@@ -23,7 +23,7 @@ export const Header = ({countBasket, isAuth, role}) => {
                     {role == 'admin' &&
                       <>
                         <Link to='/user/list'>Пользователи</Link>
-                        <Link to='/orders'>Заказы</Link> </> }
+                        <Link to='/orders'>Заказы {status && <span className='badge red'>{status}</span>}</Link> </> }
 
                        </>:
                     <Link to='/login'>Войти</Link>

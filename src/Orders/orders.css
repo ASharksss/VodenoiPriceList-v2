@@ -1,6 +1,8 @@
 
 .orders {
     width: 1700px;
+    display: flex;
+    flex-direction: column;
 }
 
 .order-item {

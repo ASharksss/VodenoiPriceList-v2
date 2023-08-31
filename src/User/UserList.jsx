@@ -56,7 +56,7 @@ export const UserList = () => {
       <div className="user_wrapper">
         {
           users.length > 0 && resultSearch.map(item => (
-            <div className="user_block shadow">
+            <div className="user_block shadow" key={item.id}>
               <div className="user_block-info">
                 <p>ФИО: <span className='user_block-text'>{item.fio}</span></p>
                 <p>Логин: <span className='user_block-text'>{item.username}</span></p>
@@ -66,7 +66,7 @@ export const UserList = () => {
               </div>
               <div className="user_block-btns">
 
-                <NavLink to='/profile'>
+                <NavLink to={'/profile/' + item.id}>
                   <button className="user_block-btn">Подробнее</button>
                 </NavLink>
 

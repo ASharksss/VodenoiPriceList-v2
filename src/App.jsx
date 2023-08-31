@@ -28,6 +28,7 @@ function App() {
   const [countBasket, setCountBasket] = useState([])
   const [catName, setCatName] = useState('')
   const [isAuth, setIsAuth] = useState(false)
+  const [statusOrder, setStatusOrder] = useState(false)
   const [role, setRole] = useState('')
 
 
@@ -37,6 +38,7 @@ function App() {
   useEffect(() => {
     axios.get('/all').then(response => {
       setCategories(response.data.categories)
+      setStatusOrder(response.data.orders)
     })
   }, [])
 
@@ -114,7 +116,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <Header countBasket={loopBasket} isAuth={isAuth} role={role}/>
+        <Header countBasket={loopBasket} isAuth={isAuth} role={role} status={statusOrder}/>
         {catName && <h2 className='price_catname'>{catName}</h2>}
         <Routes>
           <Route path='/' element={
@@ -146,7 +148,8 @@ function App() {
           <Route path='/user/list' element={<UserList/>}/>
           <Route path='/create' element={<NewUser/>}/>
           <Route path='/profile' element={<Profile/>}/>
-          <Route path='/detailOrder' element={<DetailOrder/>}/>
+          <Route path='/profile/:id' element={<Profile/>}/>
+          <Route path='/detailOrder/:id' element={<DetailOrder/>}/>
           <Route path='/orders' element={<Orders/>}/>
         </Routes>
         <ToastContainer
