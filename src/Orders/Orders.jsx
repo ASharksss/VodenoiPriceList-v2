@@ -67,7 +67,13 @@ const Orders = () => {
                                 <p>{item.status}</p>
                             </div>
                         </NavLink>
-                        {selected === '3' ? '' : <button className='order_btn' onClick={() => changeStatus(item.id)}>Принять</button>}
+                        {selected === '3' ? '' :
+                          <button className='order_btn' onClick={() => changeStatus(item.id)}>
+                            {
+                              selected == '2' ? <span>Завершить</span> : <span>Принять</span>
+                            }
+
+                        </button>}
                     </div>))}
             </div>
 
