@@ -33,7 +33,7 @@ export const Sidebar = ({fish, setFish, setCount, setShow, setCId, setMessage, s
     return (
       <div className="sidebar">
         <div className="name_sidebar">
-          <h2>Виды приманок</h2>
+          <h2 className='name_sidebar-title'>Виды приманок</h2>
         </div>
         <div className="sidebar_links">
           <div className="hy">

@@ -125,7 +125,9 @@ function App() {
                        products={products}
                        setProducts={setProducts}
                        setCatName={setCatName}
-                       isAuth={isAuth}/>}/>
+                       isAuth={isAuth}
+                       catName={catName}/>
+          }/>
           <Route path='/colors' element={<Colors setCatName={setCatName}/>}>
 
           </Route>

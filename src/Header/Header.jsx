@@ -1,38 +1,42 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import logo from '../img/vodenoi-white-logo.png'
+import logo from '../img/vodenoi-dark-logo.png'
+import Menu from "../Menu/Menu";
+import {SlBasket} from 'react-icons/sl';
 
 export const Header = ({countBasket, isAuth, role, status}) => {
-    return (
-        <header>
+  return (
 
-            <div className="logo">
-                <Link to='/' className='logo_name'>
-                    <img src={logo} alt="" className='logotype'/>
-                </Link>
-            </div>
-            <div className="links">
-                <Link to='/'>Главная</Link>
-                <Link to='/colors'>Цветовые схемы</Link>
-                <Link to='/rrc'>РРЦ</Link>
-                <Link to='/contact'>Контакты</Link>
+      <header>
+        <div className="header_wrapper">
+          <Menu isAuth={isAuth} role={role} status={status}/>
+          <div className="logo">
+            <Link to='/' className='logo_name'>
+              <img src={logo} alt="" className='logotype'/>
+            </Link>
+          </div>
+          <div className="links">
 
 
-                {isAuth ?
-                    <>
-                      <Link to='/basket'>Корзина <span>{countBasket}</span></Link>
-                      <Link to='/profile'>Профиль</Link>
-                    {role === 'admin' &&
-                      <>
-                        <Link to='/user/list'>Пользователи</Link>
-                        <Link to='/orders'>Заказы {status && <span className='badge red'>{status}</span>}</Link> </> }
+            {isAuth ?
+              <div className='row items-center'>
+                <div className='row items-center'>
+                  <Link to='/basket' className='noLink'>
+                    <SlBasket size={20}/>
+                    <span className='countBasket'>{countBasket}</span>
+                  </Link>
+                </div>
+                <Link to='/profile' className='noLink'>Профиль</Link>
 
-                       </>:
-                    <Link to='/login'>Войти</Link>
-                }
-            </div>
+              </div> : ''
+            }
+          </div>
+        </div>
 
-        </header>
 
-    )
+      </header>
+
+
+
+  )
 }

@@ -17,6 +17,11 @@ body {
     border: none;
 }
 
+.noLink {
+    text-decoration: none;
+    color: black;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -67,6 +72,7 @@ body {
 
 .price_catname {
     margin-left: 30px;
+    font-size: 24px;
 }
 
 .button_scroll {
@@ -84,12 +90,22 @@ body {
 
 
 header {
+    position: relative;
+    width: 1700px;
+    height: 120px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: #000;
+    margin: 0 auto;
+}
+
+.header_wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
-    background-color: #2d303a;
-    font-size: 20px;
+    width: 1700px;
+    margin: 0 auto;
 }
 
 
@@ -111,25 +127,19 @@ header {
     display: flex;
 }
 
-.links a:after {
-    content: "";
-    border-bottom: 3px solid red;
-    display: block;
-    width: 0px;
 
-}
-
-.links a:hover:after {
-    width: 100%;
-    height: 3px;
-    left: 0;
-    transition: all .5s linear;
+.links a:hover {
+   color: #788198;
 }
 
 .links a {
     padding: 10px;
     text-decoration: none;
-    color: white;
+}
+
+.countBasket {
+    font-size: 24px;
+    margin-left: 10px;
 }
 
 .badge {
@@ -155,8 +165,10 @@ header {
 }
 
 .name_sidebar {
-    margin-left: 10px;
-    margin-top: 30px;
+}
+
+.name_sidebar-title {
+    font-size: 24px;
 }
 
 .sidebar_links {
@@ -362,10 +374,14 @@ header {
 }
 
 .add_something {
-    margin: 300px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
     font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 
 .contact {

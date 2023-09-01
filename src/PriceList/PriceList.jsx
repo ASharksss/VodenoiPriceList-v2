@@ -5,7 +5,7 @@ import {Sidebar} from "../Sidebar/Sidebar";
 import {ScrollUp} from "../ScrollUp/ScrollUp";
 import axios from "axios";
 
-export const PriceList = ({categories, products, setProducts, handleBasket, setCatName, isAuth}) => {
+export const PriceList = ({catName, categories, products, setProducts, handleBasket, setCatName, isAuth}) => {
 
   const [count, setCount] = useState(1)
   const [load, setLoad] = useState(false)
@@ -32,6 +32,7 @@ export const PriceList = ({categories, products, setProducts, handleBasket, setC
   return (
 
     <div className="main">
+
       <Sidebar fish={categories} setFish={setProducts} setCatName={setCatName} setShow={setShow}
                setCount={setCount}
                setCId={setCId} setMessage={setMessage}/>

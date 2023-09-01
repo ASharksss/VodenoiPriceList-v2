@@ -71,7 +71,8 @@ export const Basket = ({countBasket, setCountBasket, basket, setBasket, setLoopB
 
   if (basket.length == 0) {
     return <div className="add_something">
-      Добавьте что-нибудь
+      <span>Добавьте что-нибудь</span>
+
     </div>
   }
 
