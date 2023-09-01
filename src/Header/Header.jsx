@@ -16,10 +16,12 @@ export const Header = ({countBasket, isAuth, role, status}) => {
                 <Link to='/colors'>Цветовые схемы</Link>
                 <Link to='/rrc'>РРЦ</Link>
                 <Link to='/contact'>Контакты</Link>
-                <Link to='/profile'>Профиль</Link>
+
 
                 {isAuth ?
-                    <><Link to='/basket'>Корзина <span>{countBasket}</span></Link>
+                    <>
+                      <Link to='/basket'>Корзина <span>{countBasket}</span></Link>
+                      <Link to='/profile'>Профиль</Link>
                     {role == 'admin' &&
                       <>
                         <Link to='/user/list'>Пользователи</Link>
