@@ -22,7 +22,7 @@ export const Header = ({countBasket, isAuth, role, status}) => {
                     <>
                       <Link to='/basket'>Корзина <span>{countBasket}</span></Link>
                       <Link to='/profile'>Профиль</Link>
-                    {role == 'admin' &&
+                    {role === 'admin' &&
                       <>
                         <Link to='/user/list'>Пользователи</Link>
                         <Link to='/orders'>Заказы {status && <span className='badge red'>{status}</span>}</Link> </> }

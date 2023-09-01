@@ -4,7 +4,7 @@ import './Profile.css'
 import HistoryOrder from "./HistoryOrder";
 import axios from "axios";
 
-const Profile = () => {
+const Profile = ({role}) => {
     const [user, setUser] = useState([])
     const [orders, setOrders] = useState([])
 
@@ -39,7 +39,10 @@ const Profile = () => {
         <div className='profile_wrapper'>
             <button className='noBtn backBtn' onClick={() => window.history.back()}>Назад</button>
             <ProfileCard user={user}/>
-            <HistoryOrder orders={orders}/>
+            {
+                role === 'user' ? <HistoryOrder orders={orders}/> : ''
+            }
+
         </div>
     );
 };

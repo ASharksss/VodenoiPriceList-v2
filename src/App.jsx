@@ -147,8 +147,8 @@ function App() {
           <Route path='/rrc' element={<Rrc setCatName={setCatName}/>}/>
           <Route path='/user/list' element={<UserList/>}/>
           <Route path='/create' element={<NewUser/>}/>
-          <Route path='/profile' element={<Profile/>}/>
-          <Route path='/profile/:id' element={<Profile/>}/>
+          <Route path='/profile' element={<Profile />}/>
+          <Route path='/profile/:id' element={<Profile role={role}/>}/>
           <Route path='/detailOrder/:id' element={<DetailOrder/>}/>
           <Route path='/orders' element={<Orders/>}/>
         </Routes>
