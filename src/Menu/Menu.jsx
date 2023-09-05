@@ -42,13 +42,11 @@ const Menu = ({isAuth, role, status, toggle, setToggle, hideSidebar}) => {
                     <span className='badge red'>{status}</span>}</NavLink> </>}
 
             </> :
-            <NavLink to='/login'>Войти</NavLink>
+            <NavLink to='/login' className='noLink menu__item-btn menu__item' onClick={() => handleClickLink()}>Войти</NavLink>
           }
 
 
         </div>
-
-
       </ul>
     </div>
 
