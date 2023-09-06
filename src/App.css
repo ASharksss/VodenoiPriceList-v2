@@ -287,8 +287,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: -50px;
+
+
     padding: 0 7px;
 }
 
@@ -307,6 +307,7 @@ header {
 .end_count {
     float: right;
     margin-right: 20px;
+
 }
 
 
