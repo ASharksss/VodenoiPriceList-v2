@@ -33,6 +33,9 @@ const Menu = ({countBasket, isAuth, role, status, toggle, setToggle, hideSidebar
           <NavLink to='/contact' className='noLink menu__item-btn menu__item' onClick={() => handleClickLink()}>
             Контакты
           </NavLink>
+          <NavLink to='/basket' className='noLink menu__item-btn menu__item' onClick={() => handleClickLink()}>
+          Корзина {countBasket}
+        </NavLink>
 
           {isAuth ?
             <>
@@ -42,14 +45,17 @@ const Menu = ({countBasket, isAuth, role, status, toggle, setToggle, hideSidebar
                            onClick={() => handleClickLink()}>Пользователи</NavLink>
                   <NavLink to='/orders' className='noLink menu__item-btn menu__item'
                            onClick={() => handleClickLink()}>Заказы {status &&
-                    <span className='badge red'>{status}</span>}</NavLink>
+                    <span className='badge red'>{status}</span>}
+                  </NavLink>
+
                 </> :
                 <>
+                  <NavLink to='/profile' className='noLink menu__item-btn menu__item'
+                           onClick={() => handleClickLink()}>Профиль</NavLink>
                   <NavLink to='/basket' className='noLink menu__item-btn menu__item' onClick={() => handleClickLink()}>
                     Корзина {countBasket}
                   </NavLink>
-                  <NavLink to='/profile' className='noLink menu__item-btn menu__item'
-                           onClick={() => handleClickLink()}>Профиль</NavLink>
+
 
                 </>
               }

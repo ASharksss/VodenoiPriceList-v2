@@ -17,6 +17,7 @@ export const Basket = ({countBasket, setCountBasket, basket, setBasket, setLoopB
   }
 
   useEffect(() => {
+    console.log(countBasket)
     axios.post('/basket', {order: countBasket}).then(response => {
       setProducts(response.data.products)
     })
