@@ -8,6 +8,7 @@ export const Basket = ({countBasket, setCountBasket, basket, setBasket, setLoopB
   const [price, setPrice] = useState([])
   const [localBasket, setLocalBasket] = useState([])
   const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
 
   function handleRefresh() {
     const basket = localStorage.getItem('basket')
@@ -16,13 +17,22 @@ export const Basket = ({countBasket, setCountBasket, basket, setBasket, setLoopB
     setLocalBasket(JSON.parse(basket))
   }
 
+  function loadingPage() {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+  }
+
   useEffect(() => {
-    console.log(countBasket)
+    loadingPage()
+  }, [])
+
+  useEffect(() => {
     axios.post('/basket', {order: countBasket}).then(response => {
       setProducts(response.data.products)
     })
     document.title = 'Корзина'
-  }, [])
+  }, [loading])
 
   const notify = (name) => toast.error(name + " удален с корзины!");
 
@@ -68,6 +78,12 @@ export const Basket = ({countBasket, setCountBasket, basket, setBasket, setLoopB
     let length = Object.keys(basket).length;
     setLoopBasket(length)
     handleRefresh()
+  }
+
+  if (loading) {
+    return <div className="add_something">
+      <span>Загрузка...</span>
+    </div>
   }
 
   if (basket.length == 0) {
