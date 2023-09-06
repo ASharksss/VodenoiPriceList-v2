@@ -64,7 +64,7 @@ body {
 }
 
 .priceList {
-    width: 1700px;
+    width: 100%;
     margin: 0 auto;
 
 }
@@ -91,7 +91,7 @@ body {
 
 header {
     position: relative;
-    width: 1700px;
+    width: 100%;
     height: 120px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -101,15 +101,14 @@ header {
 }
 
 .header_wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
     width: 1700px;
     margin: 0 auto;
 }
 
 
 .logo {
+    text-align: center;
     cursor: pointer;
 }
 
@@ -137,10 +136,7 @@ header {
     text-decoration: none;
 }
 
-.countBasket {
-    font-size: 24px;
-    margin-left: 10px;
-}
+
 
 .badge {
     position: absolute;

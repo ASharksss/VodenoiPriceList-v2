@@ -9,28 +9,13 @@ export const Header = ({countBasket, isAuth, role, status}) => {
 
       <header>
         <div className="header_wrapper">
-          <Menu isAuth={isAuth} role={role} status={status}/>
+          <Menu isAuth={isAuth} role={role} status={status} countBasket={countBasket}/>
           <div className="logo">
             <Link to='/' className='logo_name'>
               <img src={logo} alt="" className='logotype'/>
             </Link>
           </div>
-          <div className="links">
 
-
-            {isAuth ?
-              <div className='row items-center'>
-                <div className='row items-center'>
-                  <Link to='/basket' className='noLink'>
-                    <SlBasket size={20}/>
-                    <span className='countBasket'>{countBasket}</span>
-                  </Link>
-                </div>
-                <Link to='/profile' className='noLink'>Профиль</Link>
-
-              </div> : ''
-            }
-          </div>
         </div>
 
 

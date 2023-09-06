@@ -1,8 +1,9 @@
 import React, {useEffect, useState, useRef} from 'react';
 import './menu.css'
 import {Link, NavLink} from "react-router-dom";
+import {SlBasket} from "react-icons/sl";
 
-const Menu = ({isAuth, role, status, toggle, setToggle, hideSidebar}) => {
+const Menu = ({countBasket, isAuth, role, status, toggle, setToggle, hideSidebar}) => {
   const sidebarRef = useRef(null)
   const handleClickLink = () => {
     hideSidebar()
@@ -35,14 +36,27 @@ const Menu = ({isAuth, role, status, toggle, setToggle, hideSidebar}) => {
 
           {isAuth ?
             <>
-              {role === 'admin' &&
+              {role === 'admin' ?
                 <>
-                  <NavLink to='/user/list' className='noLink menu__item-btn menu__item' onClick={() => handleClickLink()}>Пользователи</NavLink>
-                  <NavLink to='/orders' className='noLink menu__item-btn menu__item' onClick={() => handleClickLink()}>Заказы {status &&
-                    <span className='badge red'>{status}</span>}</NavLink> </>}
+                  <NavLink to='/user/list' className='noLink menu__item-btn menu__item'
+                           onClick={() => handleClickLink()}>Пользователи</NavLink>
+                  <NavLink to='/orders' className='noLink menu__item-btn menu__item'
+                           onClick={() => handleClickLink()}>Заказы {status &&
+                    <span className='badge red'>{status}</span>}</NavLink>
+                </> :
+                <>
+                  <NavLink to='/basket' className='noLink menu__item-btn menu__item' onClick={() => handleClickLink()}>
+                    Корзина {countBasket}
+                  </NavLink>
+                  <NavLink to='/profile' className='noLink menu__item-btn menu__item'
+                           onClick={() => handleClickLink()}>Профиль</NavLink>
+
+                </>
+              }
 
             </> :
-            <NavLink to='/login' className='noLink menu__item-btn menu__item' onClick={() => handleClickLink()}>Войти</NavLink>
+            <NavLink to='/login' className='noLink menu__item-btn menu__item'
+                     onClick={() => handleClickLink()}>Войти</NavLink>
           }
 
 
