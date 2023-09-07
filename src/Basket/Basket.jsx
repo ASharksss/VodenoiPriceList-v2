@@ -96,16 +96,20 @@ export const Basket = ({countBasket, setCountBasket, basket, setBasket, setLoopB
   return (
     <div className="basket">
       <div className="titles">
-        <h1>Ваши покупки <i>(возможны скидки)</i></h1>
-        <h2>Не забудьте указать количество предметов</h2>
+
+          <h1>Ваши покупки</h1>
+          <h2>Не забудьте указать количество предметов</h2>
+
+
+        <div className="order_button">
+          <h2 className="end_count"> Общая стоимость заказа: {price}р</h2>
+          <Link to='/order'>
+            <button>Оформить заказ</button>
+          </Link>
+        </div>
       </div>
 
-      <div className="order_button">
-        <h2 className="end_count"> Общая стоимость заказа: {price}р</h2>
-        <Link to='/order'>
-          <button>Оформить заказ</button>
-        </Link>
-      </div>
+
 
       <table className='table'>
         <thead>
