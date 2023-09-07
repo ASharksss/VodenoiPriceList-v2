@@ -10,6 +10,12 @@ const Menu = ({countBasket, isAuth, role, status, toggle, setToggle, hideSidebar
     let btn = document.querySelector('.menu__btn')
     btn.click()
   }
+
+  const handleExit = () => {
+    localStorage.clear()
+    window.location.href = window.location.origin
+  }
+
   return (
     <div className="hamburger-menu" ref={sidebarRef}>
 
@@ -33,9 +39,6 @@ const Menu = ({countBasket, isAuth, role, status, toggle, setToggle, hideSidebar
           <NavLink to='/contact' className='noLink menu__item-btn menu__item' onClick={() => handleClickLink()}>
             Контакты
           </NavLink>
-          <NavLink to='/basket' className='noLink menu__item-btn menu__item' onClick={() => handleClickLink()}>
-          Корзина {countBasket}
-        </NavLink>
 
           {isAuth ?
             <>
@@ -59,7 +62,8 @@ const Menu = ({countBasket, isAuth, role, status, toggle, setToggle, hideSidebar
 
                 </>
               }
-
+              <NavLink to='/#exit' className='noLink menu__item-btn menu__item'
+                       onClick={() => handleExit()}>Выйти</NavLink>
             </> :
             <NavLink to='/login' className='noLink menu__item-btn menu__item'
                      onClick={() => handleClickLink()}>Войти</NavLink>
