@@ -1,8 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
 import './menu.css'
-import {Link, NavLink} from "react-router-dom";
-import {SlBasket} from "react-icons/sl";
-
+import {NavLink} from "react-router-dom";
 const Menu = ({countBasket, isAuth, role, status, toggle, setToggle, hideSidebar}) => {
   const sidebarRef = useRef(null)
   const handleClickLink = () => {
@@ -42,7 +40,6 @@ const Menu = ({countBasket, isAuth, role, status, toggle, setToggle, hideSidebar
 
           {isAuth ?
             <>
-
               {role === 'admin' ?
                 <>
                   <NavLink to='/user/list' className='noLink menu__item-btn menu__item'
@@ -54,6 +51,9 @@ const Menu = ({countBasket, isAuth, role, status, toggle, setToggle, hideSidebar
 
                   <NavLink to='/profile' className='noLink menu__item-btn menu__item'
                            onClick={() => handleClickLink()}>Профиль</NavLink>
+                  <NavLink to='/basket' className='noLink menu__item-btn menu__item' onClick={() => handleClickLink()}>
+                    Корзина {countBasket}
+                  </NavLink>
                 </> :
                 <>
                   <NavLink to='/basket' className='noLink menu__item-btn menu__item' onClick={() => handleClickLink()}>
@@ -69,8 +69,6 @@ const Menu = ({countBasket, isAuth, role, status, toggle, setToggle, hideSidebar
             <NavLink to='/login' className='noLink menu__item-btn menu__item'
                      onClick={() => handleClickLink()}>Войти</NavLink>
           }
-
-
         </div>
       </ul>
     </div>
