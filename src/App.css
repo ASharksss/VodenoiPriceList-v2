@@ -233,6 +233,7 @@ header {
 }
 
 .price_img {
+    object-fit: cover;
     width: 173px;
     height: 117px;
 }
